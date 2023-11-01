@@ -4,7 +4,12 @@ Take 30 minutes to work on this assignment. Make sure to ask for help if you get
 Read through the function and write comments to explain what is happening in the code.
 
  1. How would we change this to find the shortest word?
+
+
  2. How would you display the actual word in the console?
+
+
+
  */
 
 function findLongestWord(str) {
@@ -19,4 +24,16 @@ function findLongestWord(str) {
   
   return longestWordLength;
 }
+
+
+function findShortestWord(str) {
+  var words = str.split(' ');
+  var shortestWordLength = Infinity; 
+  
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length < shortestWordLength)
+    }
+  }
+  
+  console.log(findShortestWord);
 
