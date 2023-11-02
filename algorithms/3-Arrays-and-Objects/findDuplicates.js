@@ -1,5 +1,5 @@
 /**
-Take 45 minutes to complete this exercise. If you need more time, you can use Focus Friday.  
+ 
  
 Write a JavaScript function that takes an array of integers as input and returns true if there are any duplicate elements in the array, and false otherwise.
 
@@ -28,3 +28,19 @@ const numbers1 = [1, 2, 3, 4, 5, 6];
 const numbers2 = [1, 2, 3, 4, 2, 6];
 console.log(hasDuplicates(numbers1)); // Output: false
 console.log(hasDuplicates(numbers2)); // Output: true
+
+
+function hasDuplicates(arr) {
+    const encountered = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i];
+        if (encountered[num]) {
+            return true; // Duplicate found
+        } else {
+            encountered[num] = true;
+        }
+    }
+
+    return false; // No duplicates found
+}

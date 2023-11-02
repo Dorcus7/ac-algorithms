@@ -32,3 +32,53 @@ function convertHTML(str) {
 
   return convertedString;
 }
+
+function convertHTMLWithNumbers(str) {
+  let convertedString = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (char === '&') {
+      convertedString += '&amp;';
+    } else if (char === '<') {
+      convertedString += '&lt;';
+    } else if (char === '>') {
+      convertedString += '&gt;';
+    } else if (char === '"') {
+      convertedString += '&quot;';
+    } else if (char === "'") {
+      convertedString += '&apos;';
+    } else if (/[\d]/.test(char)) {
+      
+      convertedString += `&#${char.charCodeAt(0)};`;
+    } else {
+      convertedString += char;
+    }
+  }
+
+  return convertedString;
+}
+
+
+
+function convertLowerCaseAtoUppercaseA(str) {
+  let convertedString = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (char === 'a') {
+      
+      convertedString += 'A';
+    } else {
+      convertedString += char;
+    }
+  }
+
+  return convertedString;
+}
+
+
+
+
+
+
