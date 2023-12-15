@@ -30,3 +30,11 @@ const registeredUsers = [
 const username = "user1";
 const password = "password123";
 console.log(validateUserCredentials(registeredUsers, username, password)); // Output: true
+
+
+
+
+function validateUserCredentials(users, inputUsername, inputPassword) {
+    return users.some(user => user.username === inputUsername && user.password === inputPassword);
+}
+
