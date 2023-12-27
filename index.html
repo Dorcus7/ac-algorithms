@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script  defer src="./script.js"></script>
-    <script src="./algorithms/1-Strings/convertHtmlCharacters.js"></script>
+    <title>Document</title>   
 </head>
 <body>
+    <script>
+    function transportationOptions() {
+   transportationOptions(weather, time, hungry)} {
+  
+      if(weather  ==='sun'){
+         if(time > 30){
+           return "Walk"
+         }
+         else{
+           return "go by bus"
+         }
+       }
+      else if(weather === 'cloud'){
+       if(hungry === 'yes'){
+           return 'walk'
+       }
+       else{
+         return 'bus'
+       }
+    }
+    
+      else if(weather==='rain'){
+       return "bus"
+      }
+    }
+    
+    let w='sun'
+    let t1= yes
+    let h1='no'
+    let weather = prompt();
+    
+    let res= transportationOptions(w,t1,h1)
+    console.log("when sunny and time greater than 30",res)
+    
+    let w1='sun'
+    let t2= 29
+    let h2='no'
+    
+    let res1= transportationOptions(w1,t2.h2)
+    console.log("when sunny and time lesser than 30",res1)
+    
+    let w2='cloud'
+    let t3=0
+    let h3= 'yes'
+    
+    let res2= transportationOptions(w2,t3,h3)
+    console.log("when cloudy and hungry go by",res2)
+    
+    let w3='cloud'
+    let t4=0
+    let h4= 'no'
+    
+    let res3= transportationOptions(w3,t4,h4)
+    console.log("when cloudy and not hungry go by",res3)
+    
+    let w4='rain'
+    let t5=0
+    let h5= 'no'
+    
+    let res4= transportationOptions(w4,t5,h5)
+    console.log("when raining go by",res4)
+    
+
+    // validate user.
+    
+    function validateUserCredentials(users, inputUsername, inputPassword) {
+       return users.some(user => user.username === inputUsername && user.password === inputPassword);
+   }
+
+
+
+   let registeredUsers = [
+       { username: "user1", password: "password123" },
+       { username: "user2", password: "secretword" },
+       { username: "admin", password: "admin123" }
+   ];
+   let username = "user1";
+   let password = "password123";
+   let isValid=validateUserCredentials(registeredUsers, username, password)
+   console.log(isValid);
+  
+
+    </script>
     
 </body>
 </html>
